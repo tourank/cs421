@@ -1,8 +1,8 @@
 SELECT COUNT(*) AS numprojects
 FROM project P
 WHERE EXISTS (SELECT DISTINCT P.pname
-		FROM  documentauthors A, document D
-		WHERE A.employeeid=93401
-		AND A.documentid=D.documentid
-		AND D.pname=P.pname)
+FROM  documentauthors auth, document doc 
+WHERE auth.employeeid=93401
+AND auth.documentid=doc.documentid
+AND doc.pname=P.pname)
 ;
