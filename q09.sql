@@ -1,0 +1,5 @@
+SELECT COUNT(*) AS numprojects
+FROM project
+WHERE pstartdate
+BETWEEN '2021-01-01'
+AND CURRENT_DATE;
